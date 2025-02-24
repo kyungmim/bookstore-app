@@ -1,0 +1,54 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules/
+.pnp/
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage/
+
+# next.js
+.next/
+/out/
+
+# production build
+/build/
+
+# macOS 파일 (디렉토리에서 자동으로 생성되는 시스템 파일들)
+.DS_Store
+
+# 인증서 파일 (주로 .pem 파일)
+*.pem
+
+# debug
+npm-debug.log*
+
+# local environment files (환경 변수 파일)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+env.d.ts
+
+# vercel
+.vercel/
+
+# typescript 빌드 캐시 파일 (tsc가 생성하는 파일들)
+*.tsbuildinfo
+
+# 추가적으로 빌드/배포 관련 파일들
+# Next.js에서 생성한 .cache 폴더 (이미지 최적화 등)
+.cache/
+
+# IDE/편집기 관련 파일들 (VS Code, IntelliJ IDEA 등)
+.vscode/
+.idea/
+
+# log files (로그 파일들)
+*.log
+
+# 사용자 환경 파일들 (개인 환경 설정 파일)
+*.swp

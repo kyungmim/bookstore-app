@@ -1,0 +1,22 @@
+@mixin flex-horizontal($gap: 0rem) {
+  display: flex;
+  gap: $gap;
+}
+
+@mixin flex-vertical($gap: 0rem) {
+  @include flex-horizontal($gap);
+  flex-direction: column;
+}
+
+@mixin center-xy($gap: 0rem) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
