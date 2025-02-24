@@ -1,0 +1,59 @@
+@import '@styles/mixin';
+
+.homeWrapper {
+  @include flex-vertical(3rem);
+  width: 100%;
+  align-items: flex-start;
+
+  .header {
+    @include flex-horizontal(1rem);
+    align-items: flex-end;
+
+    & img {
+      width: 10rem;
+    }
+    & h1 {
+      font-size: 3rem;
+      color: var(--color-primary);
+    }
+  }
+
+  & input {
+    max-width: 50rem;
+    width: 100%;
+  }
+
+  .bookList {
+    box-shadow: inset 0 0 10 blue;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    & li {
+      width: calc((1200 - 40 - 4 * 20) / 5);
+      @include flex-vertical(1rem);
+
+      .bookCover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-shrink: 0;
+        & img {
+          aspect-ratio: 60 / 72;
+          object-fit: cover;
+        }
+      }
+
+      & h2 {
+        font-size: 1.6rem;
+      }
+
+      & p {
+        & span {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

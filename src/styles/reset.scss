@@ -100,8 +100,12 @@ video {
 /* Typography */
 body {
   color: #333;
+  background-color: #f4eee8;
   font-family: var(--font-noto), sans-serif;
   font-size: 1.4rem;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -149,6 +153,11 @@ button {
   cursor: pointer;
 }
 
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
 label {
   cursor: pointer;
 }
@@ -177,14 +186,15 @@ input[type='tel'] {
   text-indent: 1.4rem;
   width: 100%;
   border-radius: 1.4rem;
-  border: 1px solid #ddd;
+  border: 1px solid #aaa;
+  background-color: transparent;
 }
 
 input[type='text']::placeholder,
 input[type='email']::placeholder,
 input[type='password']::placeholder,
 input[type='tel']::placeholder {
-  color: #ddd;
+  color: #aaa;
   font-family: unset;
 }
 
