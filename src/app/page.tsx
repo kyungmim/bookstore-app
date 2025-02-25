@@ -1,11 +1,12 @@
 import BookList from '@/components/BookList';
 import Pagination from '@/components/Pagination';
-import { bookFetch } from '@/model/action/bookAction';
+import { bookFetch } from '@/model/fetch/bookFetch';
 import styles from '@styles/home.module.scss';
 import Image from 'next/image';
 
 const Home = async ({ searchParams }: { searchParams: { page: string } }) => {
-  const data = await bookFetch(searchParams);
+  const page = searchParams.page || '1';
+  const data = await bookFetch(page);
 
   return (
     <div className={styles.homeWrapper}>
