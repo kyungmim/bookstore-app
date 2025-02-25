@@ -1,48 +1,74 @@
 @import '@styles/mixin';
 
-.homeWrapper {
-  @include flex-vertical(3rem);
-  width: 100%;
-  align-items: flex-start;
+.headerwrapper {
+  margin: 0 auto 3rem;
+  @include center-xy;
 
-  .header {
+  & a {
+    display: inline-block;
     @include flex-horizontal(1rem);
     align-items: flex-end;
 
-    & img {
-      width: 10rem;
+    .logoCover {
+      @include center-xy(0);
+      position: relative;
+      display: block;
+      flex-shrink: 0;
     }
+
     & h1 {
       font-size: 3rem;
       color: var(--color-primary);
     }
   }
+}
 
-  & input {
-    max-width: 50rem;
+.homeWrapper {
+  @include flex-vertical(3rem);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  .searchWrapper {
     width: 100%;
+    @include center-xy(1rem);
+    justify-content: center;
+
+    & input {
+      max-width: 50rem;
+      width: 100%;
+    }
+
+    & button {
+      display: block;
+      width: 6rem;
+      height: 4.4rem;
+      background-color: var(--color-primary);
+      border-radius: 1.4rem;
+      @include center-xy(0rem);
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: rgb(135, 162, 90);
+      }
+    }
   }
 
   .bookList {
-    box-shadow: inset 0 0 10 blue;
-    display: flex;
+    @include center-xy(2rem);
     flex-wrap: wrap;
-    gap: 2rem;
 
     & li {
-      width: calc((1200 - 40 - 4 * 20) / 5);
       @include flex-vertical(1rem);
+      width: calc((1200 - 40 - 4 * 20) / 5);
+      min-height: 38rem;
 
       .bookCover {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: relative;
+        @include center-xy;
         width: 100%;
+        aspect-ratio: 216 / 267;
         flex-shrink: 0;
-        & img {
-          aspect-ratio: 60 / 72;
-          object-fit: cover;
-        }
       }
 
       & h2 {

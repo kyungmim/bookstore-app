@@ -3,6 +3,7 @@ import '@/styles/reset.scss';
 import '@/styles/common.scss';
 import '@/styles/variable.scss';
 import { Metadata } from 'next';
+import Header from '@/components/Header';
 
 const notoSansKR = Noto_Sans_KR({
   subsets: ['latin'],
@@ -28,7 +29,10 @@ export default async function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Bookstore-app</title>
       </head>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
