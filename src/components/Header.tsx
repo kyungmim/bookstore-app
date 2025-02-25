@@ -7,9 +7,9 @@ export const Header = () => {
     <header className={styles.headerwrapper}>
       <Link href="/">
         <div className={styles.logoCover}>
-          <Image width={100} height={80} src="/images/logo.svg" alt="logo" />
+          <Image width={170} height={90} src="/images/logo.svg" alt="logo" />
         </div>
-        <h1>Romance Book Search</h1>
+        <h1>HarryPotter Book</h1>
       </Link>
     </header>
   );

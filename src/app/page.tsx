@@ -1,11 +1,12 @@
-import { bookFetch } from '@/model/action/bookAction';
+import BookList from '@/components/BookList';
+import Pagination from '@/components/Pagination';
+import { bookFetch } from '@/model/fetch/bookFetch';
 import styles from '@styles/home.module.scss';
 import Image from 'next/image';
 
-const Home = async () => {
-  const data = await bookFetch();
-
-  console.log(data);
+const Home = async ({ searchParams }: { searchParams: { page: string } }) => {
+  const page = searchParams.page || '1';
+  const data = await bookFetch(page);
 
   return (
     <div className={styles.homeWrapper}>
@@ -16,22 +17,8 @@ const Home = async () => {
           <span className="hidden">검색</span>
         </button>
       </div>
-      <ul className={styles.bookList}>
-        {data?.map((item) => (
-          <li key={item.lending_edition_s}>
-            <div className={styles.bookCover}>
-              <Image src={`https://covers.openlibrary.org/b/id/${item.cover_i}-L.jpg`} alt="bookCover" fill={true} sizes="100%" />
-            </div>
-            <h2>{item.title}</h2>
-            <p>
-              <span>First Published</span>: {item.first_publish_year}
-            </p>
-            <p>
-              <span>author_name</span>: {item.author_name[0]}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <BookList bookData={data.docs} />
+      <Pagination total={data.numFound} />
     </div>
   );
 };
