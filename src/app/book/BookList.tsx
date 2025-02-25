@@ -3,14 +3,15 @@ import { bookFetch } from '@/app/model/fetch/bookFetch';
 import Pagination from '@/components/Pagination';
 import BookItem from './BookItem';
 
-const IMGSERVER = process.env.NEXT_PUBLIC_API_IMG_SERVER;
-
-export const BookList = async ({ searchParams }: { searchParams?: { page?: string } }) => {
+export const BookList = async ({ searchParams }: { searchParams?: { page?: string; query?: string; type?: string } }) => {
   const page = searchParams?.page ? String(searchParams.page) : '1';
+  const query = searchParams?.query || '';
+  const type = searchParams?.type || 'title';
 
-  const data = await bookFetch({ page });
+  const data = await bookFetch({ page, search: query, type });
 
   const bookItem = data.docs.map((item) => <BookItem key={item.key} item={item} />);
+  console.log(data.docs);
 
   return (
     <>

@@ -6,31 +6,60 @@
   align-items: center;
   justify-content: center;
 
+  //search
+
   .searchWrapper {
     width: 100%;
-    @include center-xy(1rem);
-    justify-content: center;
+    box-shadow: inset 0 0 10px #fff;
+    @include flex-vertical(2rem);
+    align-items: center;
 
-    & input {
-      max-width: 50rem;
-      width: 100%;
+    .filter {
+      @include flex-horizontal(1rem);
+      & button {
+        text-align: center;
+        display: block;
+        width: 8rem;
+        height: 4.4rem;
+        border: 0.1rem solid var(--color-primary);
+        border-radius: 1.4rem;
+        color: var(--color-primary);
+      }
+
+      button.active {
+        color: #fff;
+        background-color: var(--color-primary);
+      }
+
+      .reset:hover {
+        color: #fff;
+        background-color: rgb(186, 154, 106);
+      }
     }
 
-    & button {
-      display: block;
-      width: 6rem;
-      height: 4.4rem;
-      background-color: var(--color-primary);
-      border-radius: 1.4rem;
-      @include center-xy(0rem);
-      transition: all 0.2s;
+    .search {
+      @include center-xy(1rem);
+      justify-content: center;
+      max-width: 50rem;
+      width: 100%;
 
-      &:hover {
-        background-color: rgb(186, 154, 106);
+      & button {
+        display: block;
+        width: 6rem;
+        height: 4.4rem;
+        background-color: var(--color-primary);
+        border-radius: 1.4rem;
+        @include center-xy(0rem);
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: rgb(186, 154, 106);
+        }
       }
     }
   }
 
+  //list
   .bookList {
     @include center-xy(3rem);
     flex-wrap: wrap;

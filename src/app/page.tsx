@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Home = () => {
   return (
     <div className={styles.homeWrapper}>
-      <Link href="/booklist">Book List</Link>
+      <Link href="/book">Book List</Link>
       <Link href="/mybook">My Book</Link>
     </div>
   );
