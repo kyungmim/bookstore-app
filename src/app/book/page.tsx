@@ -1,10 +1,10 @@
-import BookList from '@/components/BookList';
-import styles from '@styles/home.module.scss';
+import styles from '@styles/booklist.module.scss';
 import Image from 'next/image';
+import BookList from './BookList';
 
 const Bookpage = async ({ searchParams }: { searchParams: { page: string } }) => {
   return (
-    <div className={styles.homeWrapper}>
+    <div className={styles.bookWrapper}>
       <div className={styles.searchWrapper}>
         <input type="search" placeholder="제목 혹은 저자를 입력하세요." />
         <button type="button">
