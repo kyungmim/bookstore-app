@@ -16,8 +16,8 @@ export default function Pagination({ total }: { total: number }) {
 
   const pages = Array.from({ length: endPage - startPage + 1 }, (_, i) => (startPage + i).toString());
 
-  const prevPage = currentPage > 1 ? currentPage - 1 : null;
-  const nextPage = currentPage < total ? currentPage + 1 : null;
+  const prevPage = currentPage > 10 ? currentPage - 10 : null;
+  const nextPage = currentPage + 10 <= total ? currentPage + 10 : null;
 
   return (
     <ul className={styles.pagination}>

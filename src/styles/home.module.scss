@@ -10,7 +10,7 @@
     align-items: flex-end;
 
     .logoCover {
-      @include center-xy(0);
+      @include center-xy;
       position: relative;
       display: block;
       flex-shrink: 0;
@@ -53,7 +53,7 @@
       transition: all 0.2s;
 
       &:hover {
-        background-color: rgb(135, 162, 90);
+        background-color: rgb(186, 154, 106);
       }
     }
   }
@@ -88,15 +88,19 @@
   }
 }
 
-//pagination
-
 // Pagination
 .pagination {
   margin-top: 1.5rem;
   display: flex;
   gap: 2rem;
   justify-content: center;
-  color: var(--color-black);
+  color: #fff;
+
+  & li {
+    & span {
+      color: #888;
+    }
+  }
 
   .selected {
     box-shadow: 0 0.2rem 0 0 var(--color-primary);

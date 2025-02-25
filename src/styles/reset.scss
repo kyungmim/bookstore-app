@@ -99,8 +99,8 @@ video {
 
 /* Typography */
 body {
-  color: #333;
-  background-color: #f4eee8;
+  color: #fff;
+  background-color: #202a43;
   font-family: var(--font-noto), sans-serif;
   font-size: 1.4rem;
   max-width: 1200px;
@@ -187,8 +187,9 @@ input[type='tel'] {
   text-indent: 1.4rem;
   padding-right: 1.4rem;
   width: 100%;
+  color: #fff;
   border-radius: 1.4rem;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   background-color: transparent;
 }
 

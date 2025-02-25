@@ -17,7 +17,7 @@ export const BookList = ({ bookData }: { bookData: OpenLibraryBook[] }) => {
             <span>First Published</span>: {item.first_publish_year}
           </p>
           <p>
-            <span>author_name</span>: {item.author_name[0]}
+            <span>author_name</span>: {`${item.author_name ? item.author_name[0] : 'unknown'}`}
           </p>
         </li>
       ))}
