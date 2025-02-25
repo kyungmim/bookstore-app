@@ -1,8 +1,11 @@
 @import '@styles/mixin';
 
+//header
+
 .headerwrapper {
   margin: 0 auto 3rem;
   @include center-xy;
+  min-height: 10rem;
 
   & a {
     display: inline-block;
@@ -27,84 +30,28 @@
   }
 }
 
+// home
 .homeWrapper {
   @include flex-vertical(3rem);
   width: 100%;
   align-items: center;
   justify-content: center;
 
-  .searchWrapper {
+  & a {
+    display: block;
     width: 100%;
-    @include center-xy(1rem);
-    justify-content: center;
-
-    & input {
-      max-width: 50rem;
-      width: 100%;
-    }
-
-    & button {
-      display: block;
-      width: 6rem;
-      height: 4.4rem;
-      background-color: var(--color-primary);
-      border-radius: 1.4rem;
-      @include center-xy(0rem);
-      transition: all 0.2s;
-
-      &:hover {
-        background-color: rgb(186, 154, 106);
-      }
-    }
-  }
-
-  .bookList {
-    @include center-xy(2rem);
-    flex-wrap: wrap;
-
-    & li {
-      @include flex-vertical(1rem);
-      width: calc((1200 - 40 - 4 * 20) / 5);
-      min-height: 38rem;
-
-      .bookCover {
-        position: relative;
-        @include center-xy;
-        width: 100%;
-        aspect-ratio: 216 / 267;
-        flex-shrink: 0;
-      }
-
-      & h2 {
-        font-size: 1.6rem;
-      }
-
-      & p {
-        & span {
-          font-weight: 700;
-        }
-      }
-    }
-  }
-}
-
-// Pagination
-.pagination {
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  color: #fff;
-
-  & li {
-    & span {
-      color: #888;
-    }
-  }
-
-  .selected {
-    box-shadow: 0 0.2rem 0 0 var(--color-primary);
+    min-height: 10rem;
+    line-height: 10rem;
+    text-align: center;
+    font-size: 3rem;
+    border: 0.1rem solid var(--color-primary);
+    border-radius: 2rem;
     color: var(--color-primary);
-    font-weight: var(--font-semibold);
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: #fff;
+    }
   }
 }

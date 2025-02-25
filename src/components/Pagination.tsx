@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@styles/home.module.scss';
+import styles from '@styles/booklist.module.scss';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 
