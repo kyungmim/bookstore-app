@@ -7,7 +7,7 @@ export const Header = () => {
     <header className={styles.headerwrapper}>
       <Link href="/">
         <div className={styles.logoCover}>
-          <Image width={170} height={90} src="/images/logo.svg" alt="logo" />
+          <Image width={170} height={90} src="/images/logo.svg" alt="logo" priority />
         </div>
         <h1>HarryPotter Book</h1>
       </Link>
