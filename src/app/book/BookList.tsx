@@ -1,5 +1,5 @@
 import styles from '@styles/booklist.module.scss';
-import { bookFetch } from '@/app/model/fetch/bookFetch';
+import { bookFetch } from '@/model/fetch/bookFetch';
 import Pagination from '@/components/Pagination';
 import BookItem from './BookItem';
 
