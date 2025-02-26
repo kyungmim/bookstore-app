@@ -2,14 +2,9 @@ import { bookDetailFetch } from '@/model/fetch/bookFetch';
 import styles from '@styles/bookDetail.module.scss';
 import ImageSlider from './ImageSlider';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
 
-export const BookDetail = async ({ params }: { params: { id: string } }) => {
-  console.log(params.id);
+const BookDetail = async ({ params }: { params: { id: string } }) => {
   const { data, authorData } = await bookDetailFetch(params.id);
-
-  console.log(data);
-  console.log('authorData', authorData);
 
   const getDayFormat = (value: string) => {
     const date = new Date(value);

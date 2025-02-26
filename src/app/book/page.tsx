@@ -1,5 +1,4 @@
 import styles from '@styles/booklist.module.scss';
-import Image from 'next/image';
 import BookList from './BookList';
 import SearchBar from '@/components/SearchBar';
 
