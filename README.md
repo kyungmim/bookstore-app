@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Harry Potter Book List Project
 
-## Getting Started
+## 📚 프로젝트 설명
 
-First, run the development server:
+이 프로젝트는 **Harry Potter** 관련 책 목록을 표시하는 웹 애플리케이션입니다. 다음과 같은 기능을 포함하고 있습니다:
+
+1. **책 목록 페이지 구현**
+
+   - 페이지네이션 적용 (한 페이지당 10개 항목) ✅
+   - 제목과 저자로 필터링할 수 있는 검색 기능 구현
+
+2. **책 상세 정보 페이지/뷰 구현**
+   - 각 책에 대한 자세한 정보를 확인할 수 있는 페이지 제공
+
+이 프로젝트에서는 [Open Library API](https://openlibrary.org/developers/api 'Open Library API')를 사용하여 책 목록 및 정보를 가져옵니다.
+
+## 🚀 GitFlow 운영
+
+- 각 기능마다 이슈를 생성하고, 해당 이슈에 대한 브랜치를 만들고 작업을 완료한 후 `dev` 브랜치에 푸시합니다.
+- 최종적으로 준비가 완료되면 `main` 브랜치에 배포합니다.
+
+## ⚙️ 실행 방법
+
+다음은 이 프로젝트를 실행하는 방법입니다:
+
+1. **의존성 설치하기**
+
+```bash
+ npm install
+```
+
+1. **개발 서버 시작하기**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 개발 서버가 성공적으로 실행되면, 웹 브라우저에서 http://localhost:3000으로 접속하여 애플리케이션을 확인할 수 있습니다.
