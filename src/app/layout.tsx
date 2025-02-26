@@ -22,7 +22,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={notoSansKR.className}>
+    <html lang="en" className={notoSansKR.variable}>
       <head>
         <meta charSet="UTF-8" />
         <link rel="icon" type="image/x-icon" href="/favicon.svg" />
