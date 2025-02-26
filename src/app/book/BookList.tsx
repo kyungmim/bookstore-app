@@ -11,7 +11,6 @@ export const BookList = async ({ searchParams }: { searchParams?: { page?: strin
   const data = await bookFetch({ page, search: query, type });
 
   const bookItem = data.docs.map((item) => <BookItem key={item.key} item={item} />);
-  console.log(data.docs);
 
   return (
     <>
