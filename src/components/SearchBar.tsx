@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form';
 
 type FormValues = { query: string };
 
-export default function SearchBar() {
+const SearchBar = () => {
   const [type, setType] = useState<'title' | 'author' | 'none'>('none');
   const { register, handleSubmit, reset } = useForm<FormValues>();
   const router = useRouter();
@@ -55,4 +55,6 @@ export default function SearchBar() {
       </form>
     </div>
   );
-}
+};
+
+export default SearchBar;

@@ -2,7 +2,7 @@ import styles from '@styles/home.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Header() {
+const Header = () => {
   return (
     <header className={styles.headerwrapper}>
       <Link href="/">
@@ -13,4 +13,6 @@ export default function Header() {
       </Link>
     </header>
   );
-}
+};
+
+export default Header;
