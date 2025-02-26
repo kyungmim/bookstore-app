@@ -3,7 +3,7 @@ import { bookFetch } from '@/model/fetch/bookFetch';
 import Pagination from '@/components/Pagination';
 import BookItem from './BookItem';
 
-export default async function BookList({ searchParams }: { searchParams?: { page?: string; query?: string; type?: string } }) {
+const BookList = async ({ searchParams }: { searchParams?: { page?: string; query?: string; type?: string } }) => {
   const page = searchParams?.page ? String(searchParams.page) : '1';
   const query = searchParams?.query || '';
   const type = searchParams?.type || 'title';
@@ -18,4 +18,6 @@ export default async function BookList({ searchParams }: { searchParams?: { page
       <Pagination total={data.numFound} />
     </>
   );
-}
+};
+
+export default BookList;
