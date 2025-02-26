@@ -4,6 +4,11 @@
 .detailWrapper {
   @include flex-horizontal(3rem);
   align-items: center;
+  transition: all 0.3s;
+
+  @include mobile {
+    @include flex-vertical(3rem);
+  }
 
   .swiperWrapper {
     position: relative;
@@ -66,6 +71,7 @@
 
       &::after {
         content: '';
+        flex-shrink: 0;
         display: block;
         width: 1.4rem;
         height: 1.4rem;
