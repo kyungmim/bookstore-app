@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const IMGSERVER = process.env.NEXT_PUBLIC_API_IMG_SERVER;
 
-const ImageSlider = ({ images }: { images: number[] }) => {
+export default function ImageSlider({ images }: { images: number[] }) {
   return (
     <>
       <Swiper spaceBetween={0} modules={[Autoplay]} loop={true} centeredSlides={true} slidesPerView={1} className={styles.swiperWrapper} autoplay={{ delay: 5000, disableOnInteraction: false }}>
@@ -22,6 +22,4 @@ const ImageSlider = ({ images }: { images: number[] }) => {
       </Swiper>
     </>
   );
-};
-
-export default ImageSlider;
+}

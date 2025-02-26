@@ -6,7 +6,7 @@ import { usePathname, useSearchParams } from 'next/navigation';
 
 const LIMIT = Number(process.env.NEXT_PUBLIC_LIMIT);
 
-const Pagination = ({ total }: { total: number }) => {
+export default function Pagination({ total }: { total: number }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get('page') ?? '1');
@@ -37,6 +37,4 @@ const Pagination = ({ total }: { total: number }) => {
       <li className={styles.next}>{nextPage ? <Link href={`${pathname}?page=${nextPage}`}>다음</Link> : <span>다음</span>}</li>
     </ul>
   );
-};
-
-export default Pagination;
+}

@@ -3,7 +3,7 @@ import styles from '@styles/bookDetail.module.scss';
 import ImageSlider from './ImageSlider';
 import Link from 'next/link';
 
-const BookDetail = async ({ params }: { params: { id: string } }) => {
+export default async function BookDetail({ params }: { params: { id: string } }) {
   const { data, authorData } = await bookDetailFetch(params.id);
 
   const getDayFormat = (value: string) => {
@@ -43,6 +43,4 @@ const BookDetail = async ({ params }: { params: { id: string } }) => {
       </div>
     </div>
   );
-};
-
-export default BookDetail;
+}
