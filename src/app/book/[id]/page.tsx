@@ -34,8 +34,10 @@ const BookDetail = async ({ params }: { params: { id: string } }) => {
         <p className={styles.excerpts}>{data.excerpts[0].excerpt}</p>
         <div className={styles.linkList}>
           <h3>Reference Links</h3>
-          {data.links.map((item) => (
-            <Link href={item.url}>{item.title}</Link>
+          {data.links.map((item, i) => (
+            <Link key={i} href={item.url}>
+              {item.title}
+            </Link>
           ))}
         </div>
       </div>
