@@ -99,9 +99,13 @@ video {
 
 /* Typography */
 body {
-  color: #333;
+  color: #fff;
+  background-color: #202a43;
   font-family: var(--font-noto), sans-serif;
   font-size: 1.4rem;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -149,6 +153,12 @@ button {
   cursor: pointer;
 }
 
+img {
+  max-width: 100%;
+  vertical-align: top;
+  object-fit: cover;
+}
+
 label {
   cursor: pointer;
 }
@@ -175,21 +185,26 @@ input[type='tel'] {
   font-size: 1.4rem;
   height: 4.4rem;
   text-indent: 1.4rem;
+  padding-right: 1.4rem;
   width: 100%;
+  color: #fff;
   border-radius: 1.4rem;
-  border: 1px solid #ddd;
+  border: 1px solid #fff;
+  background-color: transparent;
 }
 
 input[type='text']::placeholder,
 input[type='email']::placeholder,
+input[type='search']::placeholder,
 input[type='password']::placeholder,
 input[type='tel']::placeholder {
-  color: #ddd;
+  color: #aaa;
   font-family: unset;
 }
 
 input[type='text']:focus,
 input[type='email']:focus,
+input[type='search']:focus,
 input[type='password']:focus,
 input[type='tel']:focus {
   border-color: var(--color-primary);

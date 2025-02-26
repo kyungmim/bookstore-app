@@ -1,0 +1,57 @@
+@import '@styles/mixin';
+
+//header
+
+.headerwrapper {
+  margin: 0 auto 3rem;
+  @include center-xy;
+  min-height: 10rem;
+
+  & a {
+    display: inline-block;
+    @include flex-horizontal(1rem);
+    align-items: flex-end;
+
+    .logoCover {
+      @include center-xy;
+      position: relative;
+      display: block;
+      flex-shrink: 0;
+
+      & img {
+        object-fit: contain;
+      }
+    }
+
+    & h1 {
+      font-size: 3rem;
+      color: var(--color-primary);
+    }
+  }
+}
+
+// home
+.homeWrapper {
+  @include flex-vertical(3rem);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  & a {
+    display: block;
+    width: 100%;
+    min-height: 10rem;
+    line-height: 10rem;
+    text-align: center;
+    font-size: 3rem;
+    border: 0.1rem solid var(--color-primary);
+    border-radius: 2rem;
+    color: var(--color-primary);
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: #fff;
+    }
+  }
+}
