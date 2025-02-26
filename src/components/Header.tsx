@@ -2,7 +2,7 @@ import styles from '@styles/home.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const Header = () => {
+const Header = () => {
   return (
     <header className={styles.headerwrapper}>
       <Link href="/">

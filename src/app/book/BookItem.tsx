@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const IMGSERVER = process.env.NEXT_PUBLIC_API_IMG_SERVER;
 
-export const BookItem = async ({ item }: { item: OpenLibraryBook }) => {
+const BookItem = async ({ item }: { item: OpenLibraryBook }) => {
   const link = item.key.split('/').pop();
 
   return (
