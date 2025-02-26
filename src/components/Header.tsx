@@ -6,10 +6,11 @@ export const Header = () => {
   return (
     <header className={styles.headerwrapper}>
       <Link href="/">
-        <div className={styles.logoCover}>
-          <Image width={170} height={90} src="/images/logo.svg" alt="logo" priority />
-        </div>
-        <h1>Harry Potter Book</h1>
+        <h1>
+          <div className={styles.logoCover}>
+            <Image width={170} height={90} src="/images/logo.svg" alt="logo" priority />
+          </div>
+        </h1>
       </Link>
     </header>
   );

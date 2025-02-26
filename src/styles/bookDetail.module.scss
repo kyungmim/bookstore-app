@@ -1,0 +1,79 @@
+@import '@styles/mixin';
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+.detailWrapper {
+  @include flex-horizontal(3rem);
+  align-items: center;
+
+  .swiperWrapper {
+    position: relative;
+    @include center-xy;
+    width: 34rem;
+    aspect-ratio: 1 / 1.6;
+    flex-shrink: 0;
+  }
+
+  .bookInfo {
+    flex-grow: 1;
+    @include flex-vertical(1rem);
+
+    .tagList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      & span {
+        flex-shrink: 0;
+        background-color: var(--color-primary);
+        padding: 0.4rem 1rem;
+        border-radius: 1rem;
+      }
+    }
+
+    & h2 {
+      font-size: 3rem;
+      line-height: 5rem;
+    }
+
+    .authors {
+      @include flex-horizontal(1rem);
+      padding: 1rem 0;
+    }
+
+    .excerpts {
+      font-size: 2rem;
+      color: var(--color-primary);
+      padding: 2rem 4rem;
+      border-radius: 2rem;
+      border: 0.1rem solid var(--color-primary);
+      font-family: 'Dancing Script', cursive;
+    }
+  }
+
+  .linkList {
+    @include flex-vertical(1rem);
+    margin-top: 3rem;
+
+    & h3 {
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+
+    & a {
+      @include flex-horizontal(0.4rem);
+      align-items: center;
+      text-decoration: underline;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 1.4rem;
+        height: 1.4rem;
+        background-image: url('/images/link.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1.4rem;
+      }
+    }
+  }
+}

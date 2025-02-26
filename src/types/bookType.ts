@@ -26,3 +26,39 @@ export interface OpenLibraryBook {
   public_scan_b: boolean;
   title: string;
 }
+
+export interface Author {
+  author: { key: string };
+  type: { key: string };
+}
+
+export interface Link {
+  title: string;
+  url: string;
+  type: { key: string };
+}
+
+export interface Excerpt {
+  excerpt: string;
+  comment: string;
+  author: { key: string };
+}
+
+export interface OpenLibraryBookDetail {
+  title: string;
+  covers: number[];
+  key: string;
+  authors: Author[];
+  type: { key: string };
+  description: { type: string; value: string };
+  links: Link[];
+  subject_places: string[];
+  subjects: string[];
+  subject_people: string[];
+  excerpts: Excerpt[];
+  subject_times: string[];
+  latest_revision: number;
+  revision: number;
+  created: { type: string; value: string };
+  last_modified: { type: string; value: string };
+}
